@@ -1,5 +1,8 @@
 import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { Button } from "antd";
+import { Layout } from "antd";
+ 
 
 function App() {
   return (
@@ -36,7 +39,14 @@ function App() {
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
+        <Button type ="primary">CLick me </Button>
+        <Button type ="default">CLick me </Button>
+        <Button type ="dashed">CLick me </Button>
+        <Button type ="link">CLick me </Button>
+        <Button type ="text">CLick me </Button>
       </div>
+
+      
 
       <Toaster />
     </>
