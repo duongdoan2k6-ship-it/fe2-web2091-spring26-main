@@ -10,7 +10,6 @@ const Register = () => {
     <Form
       layout="vertical"
       onFinish={onFinish}
-      style={{ maxWidth: 400 }}
     >
       <Form.Item
         label="Name"

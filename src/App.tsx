@@ -1,10 +1,9 @@
 import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
-// import { Button, Form, Input } from "antd";
-// import { Layout } from "antd";
-// import { Content, Footer, Header } from "antd/es/layout/layout";
- 
-
+import Register from "./page/form";
+import Dashboard from "./page/dashboard";
+import UserList from "./page/user";
+import { Route, Routes } from "react-router-dom";
 function App() {
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -27,6 +26,9 @@ function App() {
             </Link>
             <Link to="/add" className="hover:text-gray-200">
               Thêm mới
+            </Link>
+            <Link to="/dashboard" className="hover:text-gray-200">
+              Dashboard
             </Link>
           </div>
 
@@ -67,7 +69,15 @@ function App() {
       <Footer>Footer</Footer>
       </Layout> */}
 
-      
+
+      <div className="max-w-6xl mx-auto mt-10 px-4">
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/list" element={<UserList />} />
+        </Routes>
+      </div>
+
 
       <Toaster />
     </>

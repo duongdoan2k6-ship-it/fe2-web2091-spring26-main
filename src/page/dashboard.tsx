@@ -34,12 +34,10 @@ const Dashboard = () => {
       <Layout>
         {/* Header */}
         <Header style={{ color: "#fff", fontSize: 20 }}>
-          Admin Dashboard
         </Header>
 
         {/* Content */}
         <Content style={{ padding: 20 }}>
-          Nội dung hiển thị ở đây
         </Content>
       </Layout>
     </Layout>
