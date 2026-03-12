@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Register from "./page/form";
 import Dashboard from "./page/dashboard";
 import UserList from "./page/user";
+import StudentList from "./page/lab2";
 import { Route, Routes } from "react-router-dom";
 function App() {
   const onFinish = (values: any) => {
@@ -75,6 +76,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/list" element={<UserList />} />
+          <Route path="/students" element={<StudentList />} />
+
         </Routes>
       </div>
 
