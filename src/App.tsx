@@ -5,6 +5,10 @@ import Dashboard from "./page/dashboard";
 import UserList from "./page/user";
 import StudentList from "./page/lab2";
 import { Route, Routes } from "react-router-dom";
+import Lab3 from "./page/lab3/b1lab3";
+import B2Lab3 from "./page/lab3/b2lab3";
+import ProductForm from "./page/lab3/b3lab3";
+import PostForm from "./page/lab3/b4lab3";
 function App() {
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -77,7 +81,10 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/list" element={<UserList />} />
           <Route path="/students" element={<StudentList />} />
-
+          <Route path="/lab3" element={<Lab3 />} />
+          <Route path="/lab3/b2" element={<B2Lab3 />} />
+          <Route path="/lab3/b3" element={<ProductForm />} />
+          <Route path="/lab3/b4" element={<PostForm />} />
         </Routes>
       </div>
 
