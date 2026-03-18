@@ -1,4 +1,41 @@
 {
+  "stories": [
+    {
+      "id": 1,
+      "title": "Naruto",
+      "author": "Masashi Kishimoto",
+      "image": "https://image.com/naruto.jpg",
+      "category": "Action, Adventure",
+      "description": "Truyện ninja nổi tiếng"
+    },
+    {
+      "title": "OnePiece",
+      "author": "fdv",
+      "image": "https://picsum.photos/seed/headphones/400/300",
+      "description": "abcssd",
+      "id": 2
+    },
+    {
+      "title": "GGO",
+      "author": "xyz",
+      "image": "https://picsum.photos/seed/headphones/400/300",
+      "category": 14,
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "title": "Truyện mới",
+      "description": "Tổng hợp truyện mới nhất",
+      "active": true,
+      "id": 13
+    },
+    {
+      "title": "Truyện nổi bật ",
+      "description": "Chuyện hot ",
+      "id": 14
+    }
+  ],
   "products": [],
   "users": []
 }
