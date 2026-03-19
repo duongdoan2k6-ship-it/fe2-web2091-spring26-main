@@ -80,7 +80,7 @@ const StoryList = () => {
 
     if (isError) return <p>Lỗi khi tải dữ liệu</p>;
 
-    return <Table rowKey="id" columns={columns} dataSource={data} loading={isLoading} pagination={{ pageSize: 5 }}  />;
+    return <Table rowKey="id" columns={columns} dataSource={data} loading={isLoading} pagination={{ pageSize: 3}}  />;
 };
 
 export default StoryList;

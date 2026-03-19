@@ -79,15 +79,6 @@
       "category": "Adventure, Science",
       "description": "Khôi phục nền văn minh bằng sức mạnh khoa học.",
       "createdAt": "2026-03-19T00:00:00.000Z"
-    },
-    {
-      "id": 10,
-      "title": "Chainsaw Man",
-      "author": "Tatsuki Fujimoto",
-      "image": "https://picsum.photos/seed/chainsawman/400/300",
-      "category": "Action, Dark Fantasy",
-      "description": "Denji chiến đấu với quỷ bằng sức mạnh cưa máy.",
-      "createdAt": "2026-03-19T00:00:00.000Z"
     }
   ],
   "categories": [
