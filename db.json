@@ -4,23 +4,90 @@
       "id": 1,
       "title": "Naruto",
       "author": "Masashi Kishimoto",
-      "image": "https://image.com/naruto.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqIaD4wuVHsK6dbGQlEC4MBycX72MfyVLoMg&s",
       "category": "Action, Adventure",
-      "description": "Truyện ninja nổi tiếng"
+      "description": "Truyện ninja nổi tiếng",
+      "createdAt": "2026-03-19T00:00:00.000Z"
     },
     {
       "title": "OnePiece",
       "author": "fdv",
       "image": "https://picsum.photos/seed/headphones/400/300",
       "description": "abcssd",
+      "createdAt": "2026-03-19T00:00:00.000Z",
       "id": 2
     },
     {
-      "title": "GGO",
-      "author": "xyz",
-      "image": "https://picsum.photos/seed/headphones/400/300",
-      "category": 14,
-      "id": 3
+      "id": 3,
+      "title": "Attack on Titan",
+      "author": "Hajime Isayama",
+      "image": "https://picsum.photos/seed/aot/400/300",
+      "category": "Action, Drama",
+      "description": "Cuộc chiến sinh tồn trước Titan khổng lồ.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Demon Slayer",
+      "author": "Koyoharu Gotouge",
+      "image": "https://picsum.photos/seed/demonslayer/400/300",
+      "category": "Action, Fantasy",
+      "description": "Hành trình diệt quỷ để cứu em gái của Tanjiro.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Jujutsu Kaisen",
+      "author": "Gege Akutami",
+      "image": "https://picsum.photos/seed/jjk/400/300",
+      "category": "Action, Supernatural",
+      "description": "Yuji bước vào thế giới chú thuật đầy nguy hiểm.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "My Hero Academia",
+      "author": "Kohei Horikoshi",
+      "image": "https://picsum.photos/seed/mha/400/300",
+      "category": "Action, School",
+      "description": "Câu chuyện học viện anh hùng và ước mơ của Deku.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Spy x Family",
+      "author": "Tatsuya Endo",
+      "image": "https://picsum.photos/seed/spyfamily/400/300",
+      "category": "Comedy, Action",
+      "description": "Gia đình giả nhưng đầy bí mật và ấm áp.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Tokyo Revengers",
+      "author": "Ken Wakui",
+      "image": "https://picsum.photos/seed/tokyorevengers/400/300",
+      "category": "Action, Time Travel",
+      "description": "Takemichi quay về quá khứ để thay đổi số phận.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "Dr. Stone",
+      "author": "Riichiro Inagaki",
+      "image": "https://picsum.photos/seed/drstone/400/300",
+      "category": "Adventure, Science",
+      "description": "Khôi phục nền văn minh bằng sức mạnh khoa học.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "title": "Chainsaw Man",
+      "author": "Tatsuki Fujimoto",
+      "image": "https://picsum.photos/seed/chainsawman/400/300",
+      "category": "Action, Dark Fantasy",
+      "description": "Denji chiến đấu với quỷ bằng sức mạnh cưa máy.",
+      "createdAt": "2026-03-19T00:00:00.000Z"
     }
   ],
   "categories": [

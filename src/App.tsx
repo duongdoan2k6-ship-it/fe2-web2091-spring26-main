@@ -11,6 +11,7 @@ import ProductForm from "./page/lab3/b3lab3";
 import PostForm from "./page/lab3/b4lab3";
 import StoryForm from "./page/Lab4/lab4";
 import AddCategory from "./page/Lab4/categories";
+import StoryList from "./page/lab5/stories";
 function App() {
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -28,10 +29,10 @@ function App() {
             <Link to="#" className="hover:text-gray-200">
               Trang chủ
             </Link>
-            <Link to="/list" className="hover:text-gray-200">
+            <Link to="/list-str" className="hover:text-gray-200">
               Danh sách
             </Link>
-            <Link to="/add" className="hover:text-gray-200">
+            <Link to="/lab4" className="hover:text-gray-200">
               Thêm mới
             </Link>
             <Link to="/dashboard" className="hover:text-gray-200">
@@ -89,6 +90,7 @@ function App() {
           <Route path="/lab3/b4" element={<PostForm />} />
           <Route path="/lab4" element={<StoryForm />} />
           <Route path="/category" element={<AddCategory />} />
+          <Route path="/list-str" element={<StoryList />} />
         </Routes>
       </div>
 
