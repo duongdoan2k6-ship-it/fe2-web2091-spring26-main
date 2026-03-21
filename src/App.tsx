@@ -12,6 +12,7 @@ import PostForm from "./page/lab3/b4lab3";
 import StoryForm from "./page/Lab4/lab4";
 import AddCategory from "./page/Lab4/categories";
 import StoryList from "./page/lab5/stories";
+import EditStory from "./page/lab6/edit-stories";
 function App() {
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -90,7 +91,8 @@ function App() {
           <Route path="/lab3/b4" element={<PostForm />} />
           <Route path="/lab4" element={<StoryForm />} />
           <Route path="/category" element={<AddCategory />} />
-          <Route path="/list-str" element={<StoryList />} />
+          <Route path="/strlist" element={<StoryList />} />
+          <Route path="/edit/:id" element={<EditStory />} />
         </Routes>
       </div>
 

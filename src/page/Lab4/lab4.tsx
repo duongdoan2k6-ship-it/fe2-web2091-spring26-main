@@ -32,6 +32,7 @@ export default function StoryForm() {
         onError: () => {
             toast.error("Failed to create story!")
         },
+        
 
     });
     const onFinish = (values: StoryType) => {
