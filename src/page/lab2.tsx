@@ -35,7 +35,7 @@ const StudentList = () => {
         },
         {
             title: "Action",
-            render: (_: any ,record:any) => (
+            render: () => (
                 <>
                     <button>Edit</button> |
                     <button>Delete</button>

@@ -11,6 +11,7 @@ const EditStory = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
+  // Lấy dữ liệu chi tiết
   const { data, isLoading } = useQuery({
     queryKey: ["story", id],
     queryFn: async () => {

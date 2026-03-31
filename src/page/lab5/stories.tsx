@@ -1,18 +1,9 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Button, Image, Popconfirm, Spin, Table } from "antd";
+import { Button, Popconfirm, Spin, Table } from "antd";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 const StoryList = () => {
-
-    interface StoryType {
-        id: number;
-        title: string;
-        author: string;
-        image: string;
-        createdAt: string;
-    }
-
     const { data, isLoading, isError } = useQuery({
         queryKey: ["stories"],
         queryFn: async () => {

@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, Select } from "antd";
+import { Button, Form, Input, Select } from "antd";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import toast from "react-hot-toast";

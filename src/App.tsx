@@ -1,5 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import Register from "./page/form";
 import Dashboard from "./page/dashboard";
 import UserList from "./page/user";
@@ -13,14 +14,14 @@ import StoryForm from "./page/Lab4/lab4";
 import AddCategory from "./page/Lab4/categories";
 import StoryList from "./page/lab5/stories";
 import EditStory from "./page/lab6/edit-stories";
+import { UserContext } from "./context/UserContext";
+import { Navbar } from "./components/Navbar";
 function App() {
-  const onFinish = (values: any) => {
-    console.log("Success:", values);
-  };
 
   return (
     <>
-      <nav className="bg-blue-600 text-white shadow">
+    <Navbar />
+      {/* <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="#" className="text-xl font-semibold">
             <strong>WEB2091 App</strong>
@@ -41,7 +42,8 @@ function App() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6"> 
+            <span>Username: {username}</span>
             <Link to="#" className="hover:text-gray-200">
               Đăng nhập
             </Link>
@@ -50,7 +52,7 @@ function App() {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
@@ -95,7 +97,6 @@ function App() {
           <Route path="/edit/:id" element={<EditStory />} />
         </Routes>
       </div>
-
 
       <Toaster />
     </>

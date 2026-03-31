@@ -2,7 +2,6 @@ import { Form, Input, Button, Checkbox } from "antd";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import form from "../form";
 
 const AddCategory = () => {
     interface CategoryType {
