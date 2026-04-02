@@ -1,16 +1,15 @@
 import { Layout, Menu } from "antd";
-import {
-  UserOutlined,
-  DashboardOutlined
-} from "@ant-design/icons";
+import { UserOutlined, DashboardOutlined } from "@ant-design/icons";
+import { useAuthStore } from "./stores/useAuthStore";
 
 const { Header, Sider, Content } = Layout;
 
 const Dashboard = () => {
+  const { user, token } = useAuthStore();
+  const isLoggedIn = Boolean(user && token);
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      
-      {/* Sidebar */}
       <Sider>
         <Menu
           theme="dark"
@@ -32,13 +31,13 @@ const Dashboard = () => {
       </Sider>
 
       <Layout>
-        {/* Header */}
         <Header style={{ color: "#fff", fontSize: 20 }}>
+          {isLoggedIn
+            ? `Username: ${user?.username} | Da dang nhap`
+            : "Chua dang nhap"}
         </Header>
 
-        {/* Content */}
-        <Content style={{ padding: 20 }}>
-        </Content>
+        <Content style={{ padding: 20 }}></Content>
       </Layout>
     </Layout>
   );

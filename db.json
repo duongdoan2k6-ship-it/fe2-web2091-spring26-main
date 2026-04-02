@@ -81,5 +81,12 @@
     }
   ],
   "products": [],
-  "users": []
+  "users": [
+    {
+      "email": "abc123@gmail.com",
+      "password": "$2a$10$qOnrFvEUJo9sj/qbMFSmWe/Wvt6FSWdJPQMckTrEquRBk43aoN5R2",
+      "username": "duong",
+      "id": 2
+    }
+  ]
 }

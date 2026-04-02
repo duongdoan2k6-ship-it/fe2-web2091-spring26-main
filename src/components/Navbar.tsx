@@ -1,24 +1,13 @@
-
 import { Button } from "antd";
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
 import { Link } from "react-router-dom";
+import { useAuthStore } from "../page/stores/useAuthStore";
 
 export function Navbar() {
-  const context = useContext(UserContext);
-
-  if (!context) return;
-  const { user, setUser } = context;
-  console.log("User from context:", user?.name);
-
-  const handleLogin = () => {
-    setUser({
-      name: "duongdt06",
-    });
-  };
+  const { user, token, logout } = useAuthStore();
+  const isLoggedIn = Boolean(user && token);
 
   const handleLogout = () => {
-    setUser(null);
+    logout();
   };
 
   return (
@@ -30,27 +19,35 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center space-x-8">
           <Link to="#" className="hover:text-gray-200">
-            Trang chủ
+            Trang chu
           </Link>
           <Link to="/list" className="hover:text-gray-200">
-            Danh sách
+            Danh sach
           </Link>
-          <Link to="/add" className="hover:text-gray-200">
-            Thêm mới
+          <Link to="/lab4" className="hover:text-gray-200">
+            Them moi
+          </Link>
+          <Link to="/dashboard" className="hover:text-gray-200">
+            Dashboard
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-6">
-          <span>Username: {user?.name}</span>
-          <Button onClick={handleLogin}>Login</Button>
-          <Button onClick={handleLogout}>Logout</Button>
-          
-          <Link to="#" className="hover:text-gray-200">
-            Đăng nhập
-          </Link>
-          <Link to="#" className="hover:text-gray-200">
-            Đăng ký
-          </Link>
+        <div className="hidden md:flex items-center space-x-4">
+          <span>{isLoggedIn ? `Email: ${user?.email}` : "Email: --"}</span>
+          <span>{isLoggedIn ? "Da dang nhap" : "Chua dang nhap"}</span>
+
+          {isLoggedIn ? (
+            <Button onClick={handleLogout}>Logout</Button>
+          ) : (
+            <>
+              <Link to="/login" className="hover:text-gray-200">
+                Dang nhap
+              </Link>
+              <Link to="/register" className="hover:text-gray-200">
+                Dang ky
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </nav>
