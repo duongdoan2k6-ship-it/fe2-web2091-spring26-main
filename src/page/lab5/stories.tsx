@@ -1,58 +1,39 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button, Popconfirm, Spin, Table } from "antd";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { useCRUDStory } from "../hooks/useCRUDStory";
 
 const StoryList = () => {
-    const { data, isLoading, isError } = useQuery({
-        queryKey: ["stories"],
-        queryFn: async () => {
-            const res = await axios.get("http://localhost:3000/stories");
-            return res.data;
-        },
-    });
+  const { list, remove } = useCRUDStory();
+  const { data, isLoading, isError } = list;
 
-    const qc = useQueryClient();
-    const { mutate } = useMutation({
-        mutationFn: async (id: number) =>
-            await axios.delete(`http://localhost:3000/stories/${id}`),
-        onSuccess: () => {
-            qc.invalidateQueries({ queryKey: ["stories"] });
-        },
-    });
-
-    const columns = [
-        {
-            title: "ID",
-            dataIndex: "id",
-        },
-        {
-            title: "Ảnh",
-            dataIndex: "image",
-            render: (img: string) => <img src={img} width="60" />
-        },
-        {
-            title: "Tên truyện",
-            dataIndex: "title",
-        },
-        {
-            title: "Tác giả",
-            dataIndex: "author",
-        },
-        {
-            title: "Mô tả",
-            dataIndex: "description",
-        },
-        {
-            title: "Ngày tạo ",
-            dataIndex: "createdAt",
-            render: (date: string) =>
-                new Date(date).toLocaleDateString("vi-VN")
-
-        }
-
-        ,
-        {
+  const columns = [
+    {
+      title: "ID",
+      dataIndex: "id",
+    },
+    {
+      title: "Anh",
+      dataIndex: "image",
+      render: (img: string) => <img src={img} width="60" />,
+    },
+    {
+      title: "Ten truyen",
+      dataIndex: "title",
+    },
+    {
+      title: "Tac gia",
+      dataIndex: "author",
+    },
+    {
+      title: "Mo ta",
+      dataIndex: "description",
+    },
+    {
+      title: "Ngay tao",
+      dataIndex: "createdAt",
+      render: (date: string) => new Date(date).toLocaleDateString("vi-VN"),
+    },
+    {
       title: "Action",
       render: (_: any, record: any) => (
         <>
@@ -61,7 +42,7 @@ const StoryList = () => {
             description="Are you sure to delete this story?"
             okText="Yes"
             cancelText="No"
-            onConfirm={() => mutate(record.id)}
+            onConfirm={() => remove.mutate(record.id)}
           >
             <Button danger>Delete</Button>
           </Popconfirm>
@@ -71,13 +52,20 @@ const StoryList = () => {
         </>
       ),
     },
-    ];
+  ];
 
-    if (isLoading) return <Spin />;
+  if (isLoading) return <Spin />;
+  if (isError) return <p>Loi khi tai du lieu</p>;
 
-    if (isError) return <p>Lỗi khi tải dữ liệu</p>;
-
-    return <Table rowKey="id" columns={columns} dataSource={data} loading={isLoading} pagination={{ pageSize: 3 }} />;
+  return (
+    <Table
+      rowKey="id"
+      columns={columns}
+      dataSource={data}
+      loading={isLoading}
+      pagination={{ pageSize: 3 }}
+    />
+  );
 };
 
 export default StoryList;
