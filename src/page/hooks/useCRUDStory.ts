@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
-export interface StoryPayload {
+export interface Story {
   title: string;
   author: string;
   image: string;
@@ -21,7 +21,7 @@ export const useCRUDStory = () => {
   });
 
   const addMutation = useMutation({
-    mutationFn: async (values: StoryPayload) => {
+    mutationFn: async (values: Story) => {
       const res = await axios.post("http://localhost:3000/stories", values);
       return res.data;
     },
@@ -41,7 +41,7 @@ export const useCRUDStory = () => {
   });
 
   const updateMutation = useMutation({
-    mutationFn: async (story: Partial<StoryPayload> & { id: number | string }) => {
+    mutationFn: async (story: Partial<Story> & { id: number | string }) => {
       const { id, ...values } = story;
       const res = await axios.put(`http://localhost:3000/stories/${id}`, values);
       return res.data;
